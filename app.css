@@ -1,28 +1,57 @@
 body {
-  margin: 0;
-  font-family: Tahoma, Geneva, sans-serif;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: calc(10px + 3vw);
+	text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+	background-color: #e6e6e6;
+	background: linear-gradient(0deg, rgb(214, 214, 214) 0%, rgb(250, 250, 250) 100%);
 }
 
-.App {
-  text-align: center;
+.main {
+	min-height: 100vh;
+	color: black;
 }
 
-.App-logo {
-  padding: 10vmin;
-  border: white 5vmin solid;
+.segment {
+	padding-top: calc(20px + 5vw);
+	padding-left: calc(20px + 5vw);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 20vmin);
-  color: white;
+.tech {
+	display: inline-block;
+	white-space: nowrap;
+	color: #da7900;
+	position: absolute;
+	margin-left: calc(4px + 1vw);
+	font-weight: 600;
 }
 
-.App-link {
-  color: #09d3ac;
+.tech-enter {
+	opacity: 0;
+	top: 60px;
 }
+.tech-enter-active {
+	opacity: 1;
+	top: 0px;
+	transition: opacity 500ms, top 500ms;
+	transition-timing-function: ease-in-out;
+}
+.tech-exit {
+	opacity: 1;
+	top: 0px;
+}
+.tech-exit-active {
+	opacity: 0;
+	top: -60px;
+	transition: opacity 500ms, top 500ms;
+	transition-timing-function: ease-in-out;
+}
+
+#title {
+	font-size: calc(10px + 6vw);
+}
+
+.icon-list > * {
+	margin-left: 2vw;
+}
+
